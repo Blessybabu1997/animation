@@ -1,0 +1,96 @@
+
+* {
+  /* box-sizing: border-box; */
+}
+h1{
+  font-size: 30px;
+
+}
+/* Create three equal columns that floats next to each other */
+.container{
+  margin: 4%;
+}
+.column {
+  float: left;
+  border: 2px solid black;
+  width: 31%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+  margin: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.first {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  from {background-color: blue;color: white}
+  to {background-color: gold;color: black}
+}
+
+
+
+#myDIV {
+  /* margin: auto; */
+  /* width: 200px; */
+  /* height: 100px; */
+  text-align:center;
+  color: black;
+  animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  100% {transform: rotate(360deg);}
+}
+.three{
+  background-color: blue;
+}
+.third {
+  width: 100px;
+  text-align: center;
+  height: 100px;
+  position: relative;
+  animation-name: thirdone;
+  animation-duration: 3s;
+  /*  animation-delay: 2s;*/
+  animation-fill-mode: both;
+  margin: auto;
+  animation-iteration-count: infinite;
+}
+
+@keyframes thirdone {
+
+
+  0%   {color:white; top:0px;}
+25%  {color:white; top:0px;}
+50%  {color:black;  top:200px;}
+75%  {color:white; top:400px;}
+100% {color:black;  top:0px;}
+
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: 200px;
+  grid-template-areas:
+    ". a a ."
+    ". a a .";
+}
+.item {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+}
+
+
+
